@@ -6,12 +6,17 @@ import {
 } from "../utils.js";
 import iceCreamImage from "./home.jpg";
 
+const HOME_IMAGE_WIDTH = 500;
+const HOME_IMAGE_HEIGHT = 700;
+
 export default function () {
   resetContent();
   showHeading("Very cool restaurant", 1);
   showImage(
     iceCreamImage,
     "A scoop of orange-colored ice cream on a small pedestal dish, with a fork gently piercing the top against a blue background",
+    HOME_IMAGE_WIDTH,
+    HOME_IMAGE_HEIGHT,
     ["content__image--main"],
   );
   showParagraph(

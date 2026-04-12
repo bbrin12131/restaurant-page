@@ -1,3 +1,6 @@
+const DISH_CARD_IMAGE_WIDTH = 500;
+const DISH_CARD_IMAGE_HEIGHT = 300;
+
 const contentElement = document.querySelector(".content");
 
 function resetContent() {
@@ -18,17 +21,19 @@ function showParagraph(text) {
   contentElement.appendChild(element);
 }
 
-function showImage(image, alt, additionalClasses = None) {
-  const element = document.createElement("img");
-  element.classList.add("content__image");
+function showImage(
+  image,
+  alt,
+  width = 0,
+  height = 0,
+  additionalClasses = null,
+) {
+  let classes = ["content__image"];
   if (additionalClasses) {
-    for (const className of additionalClasses) {
-      element.classList.add(className);
-    }
+    classes = classes.concat(additionalClasses);
   }
-  element.src = image;
-  element.alt = alt;
-  contentElement.appendChild(element);
+
+  contentElement.appendChild(createImage(image, alt, classes, width, height));
 }
 
 function showDishCard(name, image, alt) {
@@ -40,13 +45,38 @@ function showDishCard(name, image, alt) {
   nameElement.textContent = name;
   card.appendChild(nameElement);
 
-  const imageElement = document.createElement("img");
-  imageElement.classList.add("dish-card__image");
-  imageElement.src = image;
-  imageElement.alt = alt;
-  card.appendChild(imageElement);
+  card.appendChild(
+    createImage(
+      image,
+      alt,
+      ["dish-card__image"],
+      DISH_CARD_IMAGE_WIDTH,
+      DISH_CARD_IMAGE_HEIGHT,
+    ),
+  );
 
   contentElement.appendChild(card);
+}
+
+function createImage(image, alt, classes, width = 0, height = 0) {
+  const element = document.createElement("img");
+
+  for (const className of classes) {
+    element.classList.add(className);
+  }
+
+  element.src = image;
+  element.alt = alt;
+
+  if (width > 0) {
+    element.width = width;
+  }
+
+  if (height > 0) {
+    element.height = height;
+  }
+
+  return element;
 }
 
 export { resetContent, showHeading, showParagraph, showImage, showDishCard };
