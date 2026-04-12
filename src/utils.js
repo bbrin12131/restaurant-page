@@ -26,4 +26,22 @@ function showImage(image, alt) {
   contentElement.appendChild(element);
 }
 
-export { resetContent, showHeading, showParagraph, showImage };
+function showDishCard(name, image, alt) {
+  const card = document.createElement("div");
+  card.classList.add("dish-card");
+
+  const nameElement = document.createElement("p");
+  nameElement.classList.add("dish-card__name");
+  nameElement.textContent = name;
+  card.appendChild(nameElement);
+
+  const imageElement = document.createElement("img");
+  imageElement.classList.add("dish-card__image");
+  imageElement.src = image;
+  imageElement.alt = alt;
+  card.appendChild(imageElement);
+
+  contentElement.appendChild(card);
+}
+
+export { resetContent, showHeading, showParagraph, showImage, showDishCard };
