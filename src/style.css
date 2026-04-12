@@ -102,3 +102,7 @@ body {
   font-style: italic;
   margin-bottom: 0.5rem;
 }
+
+.dish-card__image {
+  aspect-ratio: 5 / 3;
+}
