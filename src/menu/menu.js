@@ -1,7 +1,7 @@
-import { resetContent, showHeading, showDishCard } from "./utils.js";
-import vanillaIceCreamImage from "./img/vanilla-ice-cream.jpg";
-import chocolateIceCreamImage from "./img/chocolate-ice-cream.jpg";
-import strawberryIceCreamImage from "./img/strawberry-ice-cream.jpg";
+import { resetContent, showHeading, showDishCard } from "../utils.js";
+import vanillaIceCreamImage from "./vanilla-ice-cream.jpg";
+import chocolateIceCreamImage from "./chocolate-ice-cream.jpg";
+import strawberryIceCreamImage from "./strawberry-ice-cream.jpg";
 
 export default function () {
   resetContent();

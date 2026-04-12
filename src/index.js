@@ -1,6 +1,6 @@
 import "./style.css";
-import showHome from "./home.js";
-import showMenu from "./menu.js";
+import showHome from "./home/home.js";
+import showMenu from "./menu/menu.js";
 
 function setMainNavListener() {
   const pageMap = new Map([

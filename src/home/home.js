@@ -3,8 +3,8 @@ import {
   showHeading,
   showParagraph,
   showImage,
-} from "./utils.js";
-import iceCreamImage from "./img/home.jpg";
+} from "../utils.js";
+import iceCreamImage from "./home.jpg";
 
 export default function () {
   resetContent();
