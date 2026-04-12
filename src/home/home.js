@@ -12,6 +12,7 @@ export default function () {
   showImage(
     iceCreamImage,
     "A scoop of orange-colored ice cream on a small pedestal dish, with a fork gently piercing the top against a blue background",
+    ["content__image--main"],
   );
   showParagraph(
     "Welcome to our extremely cool restaurant! It's cool because we make the best ice cream in town!",

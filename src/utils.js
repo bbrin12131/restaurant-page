@@ -18,9 +18,14 @@ function showParagraph(text) {
   contentElement.appendChild(element);
 }
 
-function showImage(image, alt) {
+function showImage(image, alt, additionalClasses = None) {
   const element = document.createElement("img");
   element.classList.add("content__image");
+  if (additionalClasses) {
+    for (const className of additionalClasses) {
+      element.classList.add(className);
+    }
+  }
   element.src = image;
   element.alt = alt;
   contentElement.appendChild(element);

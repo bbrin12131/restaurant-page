@@ -93,6 +93,10 @@ body {
   border-radius: 1rem;
 }
 
+.content__image--main {
+  aspect-ratio: 5 / 7;
+}
+
 .dish-card {
   margin: 1rem 0;
 }
