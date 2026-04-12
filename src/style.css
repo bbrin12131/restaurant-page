@@ -94,7 +94,7 @@ body {
 }
 
 .dish-card {
-  padding: 1rem;
+  margin: 1rem 0;
 }
 
 .dish-card__name {
