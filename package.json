@@ -1,0 +1,21 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Demonstrates Webpack using",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbrin12131/restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bbrin12131/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/bbrin12131/restaurant-page#readme"
+}
