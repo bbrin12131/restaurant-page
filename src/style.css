@@ -38,9 +38,15 @@ body {
 
 .main-nav {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 8rem;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+@media (min-width: 750px) {
+  .main-nav {
+    grid-auto-flow: column;
+    grid-auto-columns: 8rem;
+    justify-content: center;
+  }
 }
 
 .main-nav__button {
@@ -66,21 +72,24 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   margin: 0 auto;
-  padding: 1rem 10rem;
-  width: min(1250px, 100%);
+  padding: 1rem;
+  width: min(1000px, 100%);
   background: oklch(0.9 0.1 250);
 }
 
 .content__heading {
-  align-self: center;
   width: max-content;
 }
 
+.content__paragraph {
+  width: min(75ch, 100%);
+}
+
 .content__image {
-  align-self: center;
-  width: 50%;
+  width: min(500px, 100%);
   display: block;
   border: 5px solid oklch(1 0 0);
   border-radius: 1rem;

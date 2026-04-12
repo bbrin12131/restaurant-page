@@ -19,6 +19,7 @@ export default function () {
   para1.textContent =
     "Welcome to our extremely cool restaurant! It's cool because we make the \
     best ice cream in town!";
+  para1.classList.add("content__paragraph");
   contentElement.appendChild(para1);
 
   const para2 = document.createElement("p");
@@ -26,5 +27,6 @@ export default function () {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus \
     repellendus officia quod saepe ipsa ea ullam aut dicta ipsam perferendis \
     aliquid impedit cumque rem magnam quisquam cum, beatae laborum inventore.";
+  para2.classList.add("content__paragraph");
   contentElement.appendChild(para2);
 }
