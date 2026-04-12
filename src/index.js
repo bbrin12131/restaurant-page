@@ -1,3 +1,4 @@
 import "./style.css";
+import showHome from "./home.js";
 
-console.log("test");
+showHome();
