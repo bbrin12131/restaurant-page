@@ -80,10 +80,6 @@ body {
   background: oklch(0.9 0.1 250);
 }
 
-.content__heading {
-  width: max-content;
-}
-
 .content__paragraph {
   width: min(75ch, 100%);
 }
