@@ -15,10 +15,7 @@ function showHeading(text, level) {
 }
 
 function showParagraph(text) {
-  const element = document.createElement("p");
-  element.textContent = text;
-  element.classList.add("content__paragraph");
-  contentElement.appendChild(element);
+  contentElement.appendChild(createParagraph(text, "content__paragraph"));
 }
 
 function showImage(
@@ -40,10 +37,7 @@ function showDishCard(name, image, alt) {
   const card = document.createElement("div");
   card.classList.add("dish-card");
 
-  const nameElement = document.createElement("p");
-  nameElement.classList.add("dish-card__name");
-  nameElement.textContent = name;
-  card.appendChild(nameElement);
+  card.appendChild(createParagraph(name, "dish-card__name"));
 
   card.appendChild(
     createImage(
@@ -56,6 +50,13 @@ function showDishCard(name, image, alt) {
   );
 
   contentElement.appendChild(card);
+}
+
+function createParagraph(text, className) {
+  const element = document.createElement("p");
+  element.classList.add(className);
+  element.textContent = text;
+  return element;
 }
 
 function createImage(image, alt, classes, width = 0, height = 0) {
