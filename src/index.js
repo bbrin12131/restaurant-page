@@ -1,13 +1,13 @@
 import "./style.css";
 import showHome from "./home/home.js";
 import showMenu from "./menu/menu.js";
-import showReservation from "./about/about.js";
+import showAbout from "./about/about.js";
 
 function setMainNavListener() {
   const pageMap = new Map([
     ["home", showHome],
     ["menu", showMenu],
-    ["about", showReservation],
+    ["about", showAbout],
   ]);
 
   const mainNav = document.querySelector(".main-nav");
