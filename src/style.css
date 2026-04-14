@@ -85,7 +85,7 @@ body {
 }
 
 .content__image,
-.dish-card__image {
+.card__image {
   width: 100%;
   max-width: 500px;
   display: block;
@@ -97,16 +97,16 @@ body {
   aspect-ratio: 5 / 7;
 }
 
-.dish-card {
+.card {
   margin: 1rem 0;
 }
 
-.dish-card__name {
+.card__name {
   font-size: 1.2rem;
   font-style: italic;
   margin-bottom: 0.5rem;
 }
 
-.dish-card__image {
+.card__image {
   aspect-ratio: 5 / 3;
 }

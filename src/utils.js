@@ -1,6 +1,3 @@
-const DISH_CARD_IMAGE_WIDTH = 500;
-const DISH_CARD_IMAGE_HEIGHT = 300;
-
 const contentElement = document.querySelector(".content");
 
 function resetContent() {
@@ -32,20 +29,14 @@ function showImage(
   contentElement.appendChild(createImage(image, alt, classes, width, height));
 }
 
-function showDishCard(name, image, alt) {
+function showCard(name, image, alt, imageWidth = 0, imageHeight = 0) {
   const card = document.createElement("div");
-  card.classList.add("dish-card");
+  card.classList.add("card");
 
-  card.appendChild(createParagraph(name, "dish-card__name"));
+  card.appendChild(createParagraph(name, "card__name"));
 
   card.appendChild(
-    createImage(
-      image,
-      alt,
-      ["dish-card__image"],
-      DISH_CARD_IMAGE_WIDTH,
-      DISH_CARD_IMAGE_HEIGHT,
-    ),
+    createImage(image, alt, ["card__image"], imageWidth, imageHeight),
   );
 
   contentElement.appendChild(card);
@@ -83,4 +74,4 @@ function createImage(image, alt, classes, width = 0, height = 0) {
   return element;
 }
 
-export { resetContent, showHeading, showParagraph, showImage, showDishCard };
+export { resetContent, showHeading, showParagraph, showImage, showCard };
