@@ -3,7 +3,7 @@ import {
   showHeading,
   showParagraph,
   showImage,
-} from "../utils.js";
+} from "../screen.js";
 import iceCreamImage from "./home.jpg";
 
 const HOME_IMAGE_WIDTH = 500;

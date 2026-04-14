@@ -1,4 +1,4 @@
-import { resetContent, showHeading, showParagraph } from "../utils.js";
+import { resetContent, showHeading, showParagraph } from "../screen.js";
 
 export default function () {
   resetContent();

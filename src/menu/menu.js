@@ -1,4 +1,4 @@
-import { resetContent, showHeading, showCard } from "../utils.js";
+import { resetContent, showHeading, showCard } from "../screen.js";
 import vanillaIceCreamImage from "./vanilla-ice-cream.jpg";
 import chocolateIceCreamImage from "./chocolate-ice-cream.jpg";
 import strawberryIceCreamImage from "./strawberry-ice-cream.jpg";
