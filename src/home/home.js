@@ -17,7 +17,6 @@ export default function () {
     "A scoop of orange-colored ice cream on a small pedestal dish, with a fork gently piercing the top against a blue background",
     HOME_IMAGE_WIDTH,
     HOME_IMAGE_HEIGHT,
-    ["content__image--main"],
   );
   showParagraph(
     "Welcome to our extremely cool restaurant! It's cool because we make the best ice cream in town!",

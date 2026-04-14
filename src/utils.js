@@ -14,19 +14,10 @@ function showParagraph(text) {
   contentElement.appendChild(createParagraph(text, "content__paragraph"));
 }
 
-function showImage(
-  image,
-  alt,
-  width = 0,
-  height = 0,
-  additionalClasses = null,
-) {
-  let classes = ["content__image"];
-  if (additionalClasses) {
-    classes = classes.concat(additionalClasses);
-  }
-
-  contentElement.appendChild(createImage(image, alt, classes, width, height));
+function showImage(image, alt, width = 0, height = 0) {
+  contentElement.appendChild(
+    createImage(image, alt, "content__image", width, height),
+  );
 }
 
 function showCard(name, image, alt, imageWidth = 0, imageHeight = 0) {
@@ -36,7 +27,7 @@ function showCard(name, image, alt, imageWidth = 0, imageHeight = 0) {
   card.appendChild(createParagraph(name, "card__name"));
 
   card.appendChild(
-    createImage(image, alt, ["card__image"], imageWidth, imageHeight),
+    createImage(image, alt, "card__image", imageWidth, imageHeight),
   );
 
   contentElement.appendChild(card);
@@ -53,13 +44,9 @@ function fillTextElement(element, text, className) {
   return element;
 }
 
-function createImage(image, alt, classes, width = 0, height = 0) {
+function createImage(image, alt, className, width = 0, height = 0) {
   const element = document.createElement("img");
-
-  for (const className of classes) {
-    element.classList.add(className);
-  }
-
+  element.classList.add(className);
   element.src = image;
   element.alt = alt;
 
