@@ -9,8 +9,7 @@ function resetContent() {
 
 function showHeading(text, level) {
   const element = document.createElement(`h${level}`);
-  element.classList.add("content__heading");
-  element.textContent = text;
+  fillTextElement(element, text, "content__heading");
   contentElement.appendChild(element);
 }
 
@@ -54,6 +53,10 @@ function showDishCard(name, image, alt) {
 
 function createParagraph(text, className) {
   const element = document.createElement("p");
+  return fillTextElement(element, text, className);
+}
+
+function fillTextElement(element, text, className) {
   element.classList.add(className);
   element.textContent = text;
   return element;
